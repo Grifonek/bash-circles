@@ -17,7 +17,6 @@ for ((i = 0; i < d; i++)); do
   for ((j = 0; j < d; j++)); do
     x_sqrt=$(echo "($i - $offset_radius)^2" | bc -l)
     y_sqrt=$(echo "($j - $offset_radius)^2" | bc -l)
-    # distance=$(echo "$x_sqrt + $y_sqrt" | bc -l)
 
     if (( $(echo "$r_min <= $x_sqrt + $y_sqrt && $x_sqrt + $y_sqrt <= $r_max" | bc -l) )); then
       echo -n "X "
